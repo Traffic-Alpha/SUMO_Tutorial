@@ -1,0 +1,10 @@
+<configuration>
+    <input>
+        <net-file value="sumo.net.xml"/>
+        <route-files value="sumo.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="50"/>
+    </time>
+</configuration>
