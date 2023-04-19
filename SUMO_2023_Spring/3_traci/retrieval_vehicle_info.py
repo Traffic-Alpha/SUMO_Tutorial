@@ -5,7 +5,7 @@
 1. traci.vehicle.getPosition()，车辆位置；
 2. traci.vehicle.getSpeed()，车辆速度；
 3. traci.vehicle.getWaitingTime()，车辆等待时间；
-@LastEditTime: 2023-04-11 14:12:54
+@LastEditTime: 2023-04-19 19:10:57
 '''
 import traci
 import sumolib
@@ -21,7 +21,7 @@ traci.start(
 # 仿真直到路网中没有车辆
 while traci.simulation.getMinExpectedNumber() > 0:
     time = traci.simulation.getTime()
-    for vehID in traci.vehicle.getIDList():
+    for vehID in traci.vehicle.getIDList(): # 获得所有，车辆的 ID
         pos = traci.vehicle.getPosition(vehID)
         speed = traci.vehicle.getSpeed(vehID)
         time_loss = traci.vehicle.getWaitingTime(vehID)
